@@ -38,6 +38,9 @@ body{
 .head1,.image1 ,.slogan,.sec_con{
     margin-top:100px;
 }
+.signupheader, .loginheader{
+    margin-left: 40%;
+}
 @media (max-width:578px){
     .img{
         height: 100%;
