@@ -1,0 +1,53 @@
+body{
+    background-image: linear-gradient(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #afcde0, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-repeat: no-repeat;
+}
+
+.nav1{
+    background-color: #455a94;
+    background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.login a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.login a:hover{
+    border-radius: 10px;
+    background-color: #80aed1;    
+    color: rgb(49, 48, 117);
+    font-size: 20px;
+    font-weight: 700;
+}
+.img1{
+    height: 20%;
+    width: 20%;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.head1,.image1 ,.slogan,.sec_con{
+    margin-top:100px;
+}
+@media (max-width:578px){
+    .img{
+        height: 100%;
+        width: 100%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    .head1{
+        margin-top: 50%;
+    }
+    
+}
