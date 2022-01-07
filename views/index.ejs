@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>INFO_DRIVE</title>
+  <meta charset="utf-8">
+  <link rel="icon" type="image/x-icon" href="pictures/h_icon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bodyindex">
+
+<nav class="navbar navbar-expand-sm navbar-dark fixed-top nav1">
+  <div class="container-fluid">
+    <a class="navbar-brand logo" href="#">HITLESS</a>
+  </div>
+  
+    <div class="d-flex navbutton">
+      <a  href="#" data-bs-toggle ="modal" data-bs-target="#loginForm" >Login</a>
+      <a  href="#" data-bs-toggle ="modal" data-bs-target="#signupForm">Signup</a>
+    </div>
+</nav>
+
+<div class="container-fluid text-center">
+    <div class="head1">
+        <h1>HITLESS-My Data Drive</h1>
+    </div>
+    <% if(message == "success"){%>
+    <div class="alert alert-success alert-dismissible">
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      <strong><%= message %></strong> 
+    </div>
+    <% } else if(message == "Incorrect"){%>
+      <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong><%= message %></strong> 
+      </div>
+      <% } %>
+    <div class="image1">
+        <img src="pictures/h_icon.jpg" alt="hitless_img" class="img1" >
+    </div>
+    <div class="slogan">
+        <h2>Effortlessly manages all your information.</h2>
+    </div>
+   
+
+    <div id="carouselExampleInterval" class="carousel slide carso_outer" data-bs-ride="carousel">
+      <div class="carousel-inner carso_inner">
+        <div class="carousel-item active" data-bs-interval="2500">
+          <img src="pictures/cor4.jpg" class="d-block w-100 carim" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="pictures/cor5.jpg" class="d-block w-100 carim" alt="...">
+        </div>
+        
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <div class="sec_con">
+      <h3>Access your necessary info and files at anytime, anywhere on the go..</h3>
+      <h3 class="h3so">So don't hestitate to sign up</h3>
+      <h4>You would really love it!</h4>
+      <h5 class="h5final">Give a Try</h5>
+  </div>         
+</div>
+
+<div class="text-center">
+    
+</div>
+<!-- Login popup -->
+<div class="modal fade" id="loginForm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <!-- Login Form -->
+          <form action="/signin" method="post">
+            <div class="modal-header">
+              <h5 class="modal-title loginheader">Login</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                  <label for="Username">Username<span class="text-danger">*</span></label>
+                  <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
+              </div>
+  
+              <div class="mb-3">
+                  <label for="Password">Password<span class="text-danger">*</span></label>
+                  <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+              </div>
+              <!-- <div class="mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                  <label class="form-check-label" for="remember">Remember Me</label>
+                  <a href="#" class="float-end">Forgot Password</a>
+              </div> -->
+            </div>
+            <div class="modal-footer pt-4">                  
+              <button type="submit" class="btn btn-success mx-auto w-100">Login</button>
+            </div>
+            <p class="text-center">Not yet account, <a href="#" data-bs-toggle ="modal" data-bs-target="#signupForm">Signup</a></p> 
+        </form>
+      </div>
+    </div>
+  </div>
+<!-- Sign-up popup -->
+<div class="modal fade" id="signupForm" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <!-- signup Form -->
+          <form action="/signup" method="post">
+            <div class="modal-header">
+              <h5 class="modal-title signupheader">Sign-up</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                  <label for="Username">Username<span class="text-danger">*</span></label>
+                  <input type="text" name="username" class="form-control" id="Username" placeholder="Enter Username">
+              </div>
+  
+              <div class="mb-3">
+                  <label for="Password">Password<span class="text-danger">*</span></label>
+                  <input type="password" name="password" class="form-control" id="Password" placeholder="Enter Password">
+              </div>
+              <div class="mb-3">
+                <label for="rPassword">Re-Enter Password<span class="text-danger">*</span></label>
+                <input type="password" name="rpassword" class="form-control" id="rPassword" placeholder="Enter Password Again">
+            </div>
+              <!-- <div class="mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="remember" required>
+                  <label class="form-check-label" for="remember">Remember Me</label>
+                  <a href="#" class="float-end">Forgot Password</a>
+              </div> -->
+            </div>
+            <div class="modal-footer pt-4">                  
+              <button type="submit" class="btn btn-success mx-auto w-100">Login</button>
+            </div>
+            <p class="text-center">Already have an account, <a href="#" data-bs-toggle ="modal" data-bs-target="#loginForm">Login</a></p> 
+        </form>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
+
